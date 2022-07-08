@@ -1,0 +1,27 @@
+{
+  "name": "madeofpeople/territory-impact",
+  "description": "composer config for the territory impact site",
+  "type": "project",
+  "require": {
+    "composer/installers": "^2.1",
+    "htmlburger/carbon-fields": "^3.3"
+  },
+  "require-dev": {
+    "phpcompatibility/phpcompatibility-wp": "^2.1",
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.7.2",
+    "wp-cli/wp-cli-bundle": "^2.6",
+    "wp-coding-standards/wpcs": "^2.3"
+  },
+  "authors": [
+    {
+      "name": "thiago de mello bueno",
+      "email": "thiago@madeofpeople.org"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true
+    }
+  }
+}

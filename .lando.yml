@@ -1,0 +1,6 @@
+name: theterritory
+recipe: pantheon
+config:
+  framework: wordpress
+  site: theterritory
+  id: 053416f9-7b21-4a6f-a9a0-4f4ee50970d6
