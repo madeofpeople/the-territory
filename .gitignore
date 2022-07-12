@@ -29,6 +29,8 @@ wp-content/*
 wp-content/plugins/*
 !/wp-content/plugins/the-territory-site-functionality/
 !/wp-content/plugins/the-territory-site-functionality/vendor/
+!/wp-content/plugins/the-territory-site-functionality/vendor/autoload.php
+!/wp-content/plugins/the-territory-site-functionality/vendor/composer/
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
@@ -71,3 +73,6 @@ Thumbs.db
 # ignore node/grunt dependency directories
 node_modules/
 vendor/
+
+!/wp-content/plugins/the-territory-site-functionality/vendor/autoload.php
+!/wp-content/plugins/the-territory-site-functionality/vendor/composer/
