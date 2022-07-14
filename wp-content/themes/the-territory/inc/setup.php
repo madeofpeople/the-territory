@@ -132,22 +132,24 @@ add_action( 'after_setup_theme', 'the_territory_content_width', 0 );
 function the_territory_widgets_init() {
 
 	// Define sidebars.
-	$sidebars = [
-		'sidebar-1' => esc_html__( 'Sidebar 1', 'the-territory' ),
-	];
+	$sidebars = array(
+		'sidebar-1' => esc_html__( 'Sidebar', 'the-territory' ),
+		'content-bottom' => esc_html__( 'Content Bottom', 'the-territory' ),
+		'footer' => esc_html__( 'Footer', 'the-territory' ),
+	);
 
 	// Loop through each sidebar and register.
 	foreach ( $sidebars as $sidebar_id => $sidebar_name ) {
 		register_sidebar(
-			[
+			array(
 				'name'          => $sidebar_name,
 				'id'            => $sidebar_id,
 				'description'   => /* translators: the sidebar name */ sprintf( esc_html__( 'Widget area for %s', 'the-territory' ), $sidebar_name ),
-				'before_widget' => '<aside class="widget %2$s">',
-				'after_widget'  => '</aside>',
-				'before_title'  => '<h2 class="widget-title">',
-				'after_title'   => '</h2>',
-			]
+				'before_widget' => '<div class="widget %2$s">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			)
 		);
 	}
 
