@@ -19,8 +19,6 @@ get_header(); ?>
 
 			the_post_navigation();
 
-			the_territory_display_comments();
-
 		endwhile; // End of the loop.
 		?>
 
