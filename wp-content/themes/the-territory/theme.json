@@ -46,6 +46,7 @@
             "blockGap": null,
             "margin": false,
             "padding": false,
+            "width": false,
             "units": []
         },
         "typography": {
@@ -80,6 +81,17 @@
             "core/button": {
                 "border": {
                     "radius": false
+                },
+                "typography": {
+                    "textTransform": true,
+                    "customFontSize": false,
+                    "fontSizes": [],
+                    "fontStyle": false,
+                    "fontWeight": false,
+                    "letterSpacing": false,
+                    "lineHeight": false,
+                    "textDecoration": false,
+                    "fontFamilies": []
                 }
             }
         }
