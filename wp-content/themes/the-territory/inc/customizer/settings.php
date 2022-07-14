@@ -35,11 +35,12 @@ function the_territory_customize_additional_scripts( $wp_customize ) {
 
 	// Register a setting.
 	$wp_customize->add_setting(
-		'the_territory_footer_scripts',
-		[
-			'default'           => '',
-			'sanitize_callback' => 'force_balance_tags',
-		]
+		'default_featured_image',
+		array(
+			'default'   => '',
+			'transport' => 'refresh',
+			'type'      => 'option',
+		)
 	);
 
 	// Create the setting field.
@@ -51,6 +52,16 @@ function the_territory_customize_additional_scripts( $wp_customize ) {
 			'section'     => 'the_territory_additional_scripts_section',
 			'type'        => 'textarea',
 		]
+		new \WP_Customize_Image_Control(
+			$wp_customize,
+			'default_featured_image',
+			array(
+				'label'       => esc_html__( 'Add a default post image', 'debtcollective' ),
+				'description' => esc_html__( 'Page header image to display if a featured image isn\'t supplied.', 'debtcollective' ),
+				'section'     => 'media_defaults',
+				'settings'    => 'default_featured_image',
+			)
+		)
 	);
 }
 
